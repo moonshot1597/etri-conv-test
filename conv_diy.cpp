@@ -2,28 +2,30 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <iostream>
 
-int your_conv( cv::Mat src,
-               cv::Mat dst,
-               cv::Mat kernel,
+int your_conv( cv::Mat src,//input
+               cv::Mat dst,//output
+               cv::Mat kernel,//filter
                int stride,
                int padding
                )
 {
     int src_height = src.rows;
     int src_width = src.cols;
+    int src_depth = src.chennels;
 
     int kernel_height = kernel.rows;
     int kernel_width = kernel.cols;
 
     int dst_height;
     int dst_width;
+    int ds_depth = src.chennels;
 
     // src.ptr<unsigned char>(i)[ calculate INDEX ]
 
     // MAKE YOUR OWN CONVOLUTION PROCESS
 
     // if success
-    return 0
+    return 0;
 
     // if fail - in the case of wrong parameters...
     // return -1
@@ -49,6 +51,7 @@ int main ( int argc, char** argv )
 
     // Run 2D filter
     //cv::filter2D(src, dst, -1 , kernel, cv::Point( -1, -1 ), 0, cv::BORDER_DEFAULT );
+    for(i=0; i++)
 
     // ---------------------------
     your_conv(src,dst,kernel,1,0);
